@@ -46,6 +46,11 @@ const Hero = () => {
           variants={textVariants}
           initial="initial"
           animate="animate"
+          onClick={() => {
+            document.getElementById("Portfolio")?.scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
         >
           <motion.h2 variants={textVariants}>SARIM KHAN</motion.h2>
           <motion.h1 variants={textVariants}>
@@ -55,7 +60,16 @@ const Hero = () => {
             <motion.button variants={textVariants}>
               See the Latest Works
             </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            <motion.button
+              variants={textVariants}
+              onClick={() => {
+                document.getElementById("Contact")?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
+            >
+              Contact Me
+            </motion.button>
             <a
               href="https://drive.google.com/file/d/10Pg0jL-QY-acZbD6RAlTzjbm0ZXpEnSi/view?usp=sharing"
               target="_blank"
